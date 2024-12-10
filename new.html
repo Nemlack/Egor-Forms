@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New page</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+
+        }
+
+        #username, #email, #password {
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #c4c4c4;
+
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form">
+        <div class="container">
+            <input type="text" id="username">
+            <input type="email" id="email">
+			<input type="password" id="password">
+        </div>
+        <!-- <input type="text" id="password"> -->
+    </form>
+    <script>
+        let id = (id) => document.getElementById(id)
+        let classes = (classes) => document.getElementsByClassName(classes)
+
+        let username = id("username"),
+            email = id("email"),
+            password = id("password"),
+            form = id("form"),
+            passwordError = id("passwordError"),
+            confirmPasswordError = id("confirmPasswordError"),
+
+            errorMsg = classes("error"),
+            successIcon = classes("success-icon"),
+            failureIcon = classes("failure-icon");
+        
+        username.value = localStorage.getItem(0);
+        email.value = localStorage.getItem(1);
+		password.value = localStorage.getItem(2);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="illustration.svg" alt="">
+        </div>
+        <div class="image"></div>
+        <div class="text">
+            Start for free & get<br>
+            attractive offers today!
+        </div>
+        <form id="form">
+            <div class="title">Get Started</div>
+
+            <div class="username">
+                <label for="username">User Name</label>
+                <i class="fas fa-user"></i>
+
+                <input type="text" name="username" id="username" placeholder="Sergey Mensov">
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <i class="far fa-envelope"></i>
+
+                <input type="email" name="email" id="email" placeholder="mensov@rf.unn.ru">
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <i class="fas fa-lock"></i>
+
+                <input type="password" name="password" id="password" placeholder="Password here">
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+                <p id="passwordError">Password must contain the following:</p>
+                <div class="error"></div>
+            </div>
+            <div>
+                <label for="confirmPasswordError">Confirm Password</label>
+                <i class="fas fa-lock"></i>
+
+                <input type="password" name="confirmPasswordError" id="confirmPasswordError" placeholder="Confirm password here">
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+                <div class="error"></div>
+            </div>
+            <form>
+                <button id="btn" type="submit">Submit</button>
+                <button type="button" onclick="sendMail()">Send</button>
+            </form>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
